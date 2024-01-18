@@ -10,7 +10,7 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TapController tapController = Get.find();
-    ListController listController = Get.put(ListController());
+    // ListController listController = Get.put(ListController());
     return Scaffold(
       body: Container(
         width: double.maxFinite,

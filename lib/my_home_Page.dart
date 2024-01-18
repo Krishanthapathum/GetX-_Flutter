@@ -10,7 +10,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //dependency injection
-    TapController tapController = Get.put(TapController());
+    // TapController tapController = Get.put(TapController());
+    TapController tapController = Get.find();
+
     return Scaffold(
         body: Container(
       width: double.maxFinite,
