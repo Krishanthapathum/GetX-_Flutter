@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_tutorial/controllers/tap_controller.dart';
 import 'package:get_tutorial/first_page.dart';
+import 'package:get_tutorial/second_page.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -87,7 +88,9 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.to(() => const SecondPage());
+            },
             child: Container(
               margin: EdgeInsets.all(20),
               width: double.maxFinite,
@@ -98,7 +101,7 @@ class MyHomePage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "tap",
+                  "Go to Second Page",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
