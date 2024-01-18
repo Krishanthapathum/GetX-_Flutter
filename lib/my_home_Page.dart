@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_tutorial/controllers/tap_controller.dart';
+import 'package:get_tutorial/first_page.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -16,8 +17,9 @@ class MyHomePage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          //alternative way to get controller without using obx
           GetBuilder<TapController>(
-            builder: (tapController) {
+            builder: (_) {
               return Container(
                 margin: EdgeInsets.all(20),
                 width: double.maxFinite,
@@ -62,7 +64,9 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Get.to(() => const FirstPage());
+            },
             child: Container(
               margin: EdgeInsets.all(20),
               width: double.maxFinite,
@@ -73,7 +77,7 @@ class MyHomePage extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  "tap",
+                  "Go to First Page",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
